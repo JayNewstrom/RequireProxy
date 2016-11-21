@@ -1,0 +1,20 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+subprojects {
+    group = PROJECT_GROUP_ID
+    version = PROJECT_VERSION
+}
